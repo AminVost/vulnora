@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS auth_throttles (
+ email TEXT PRIMARY KEY, attempts INTEGER NOT NULL DEFAULT 0,
+ locked_until TIMESTAMPTZ, updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
